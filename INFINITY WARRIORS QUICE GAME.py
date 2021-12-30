@@ -1,5 +1,9 @@
-input("WELCOME TO THE KCG COLLEGE CROREPATHY GAME....TYPE (OK) TO CONTINUE....   ")
+print("WELCOME TO THE KCG COLLEGE CROREPATHY GAME...")
+print("YOU HAVE TEN QUESTIONS.. ANSWER THE TEN QUESTIONS AND GET THE MONEY....")
+input("TYPE (OK) TO CONTINUE....   ")
 
+name = input("What is your name? : ")
+print("Good Luck ! ", name)
 def new_game():
 
     guesses = []
@@ -20,7 +24,7 @@ def new_game():
 
     display_score(correct_guesses, guesses)
 
-# -------------------------
+
 def check_answer(answer, guess):
 
     if answer == guess:
@@ -30,7 +34,6 @@ def check_answer(answer, guess):
         print("WRONG!")
         return 0
 
-# -------------------------
 def display_score(correct_guesses, guesses):
     print("-------------------------")
     print("RESULTS")
@@ -47,9 +50,8 @@ def display_score(correct_guesses, guesses):
     print()
 
     score = int((correct_guesses/len(questions))*10000000)
-    print("Your WINNING AMOUNT is: "+str(score)+" RUPPES  OUT OF 100000 "" CONGRATULATIONS  ENJOY")
+    print(name, "YOUR WINNING AMOUNT iS: "+str(score)+" RUPPESS  OUT OF 10000000 "" CONGRATULATIONS  ENJOY")
 
-# -------------------------
 def play_again():
 
     response = input("Do you want to play again? (yes or no): ")
@@ -59,21 +61,30 @@ def play_again():
         return True
     else:
         return False
-# -------------------------
-
-
+    
 questions = {
  "Who Is The Faculty for B10 PYTHON PROGRAMMING COURSE ?: ": "C",
  "What year was KCG COLLEGE STARTED ?: ": "A",
- "Who is The Founder Of the KCG COLLEGE ?: ": "C",
- "Who is The BOY Representative of B10 Department ?: ": "B"
- #Who is The BOY Representative of B10 Department ?: ": "B" #Who is Our CURRENT PRINCIPAL ? " :"D"
+ "Who is The Founder Of THE KCG COLLEGE OF TECHNOLOGY ?: ": "C",
+ "Who is The BOY Representative For B10 Department ?: ": "B",
+ "Who is The HOD of The SCINECE AND HUMANITY DEPARTMENT ?: ": "A",
+ "How Many Students Are in the B10 ?: ": "B",
+ "What is the Full Form For AI and DS ?:": "D",
+ "Who is the Girl REPRESENTATIVE for B10 Department ?: ": "C",
+ "Who is the Handsome Male Faculty For B10 Department ?: ": "A",
+ "Who is Our CURRENT PRINCIPAL ? " :"D"
 }
 
 options = [["A. KAMALA HASAN SIR", "B. VIJAYAKANTH SIR", "C. PALANIAPPAN SIR", "D. RAJINIKANTH SIR"],
           ["A. 1998", "B. 1999","C. 2000", "D. 2016"],
-          ["A. KCG SUDARSHAN", "B. KCG MUHAMMAD", "C. KCG VERGHESE", "D. KCG ABDUL"],
-          ["A. DIKESH ","B. KUMARAN", "C. DINAKARAN", "D. ANAND"]]
+          ["A. KCG GOKUL ", "B. KCG SRIRAM", "C. KCG VERGHESE", "D. KCG SRIRAM"],
+          ["A. DIKESH ","B. KUMARAN", "C. DINAKARAN", "D. ANAND"],
+           ["A. BINDHU MAM", "B. JANANI MAM", "C. RAJALAKSHMI MAM", "D. LINU MAM"],
+           ["A. 78","B. 63","C. 64","D. 71"],
+           ["A. Articulture and developing ","B. Artificial Developements","C. Artical Writting","D. Artificial Intelegence And Data Science"],
+           ["A. DHAKSHA SING  ","B. APPARNA SING","C. NEHA SING","D. ANJANA SING"],
+           ["A. SHANKAR SIR ","B. AR MUGUGADASS SIR ","C. PALANIAPPAN SIR","D. ATLEE SIR"],
+           ['A.GOKUL','B.GOUSHIK SAM','C.SASHREEK','D.P.DEIVA SUNDARI']]
 
 
 
@@ -82,4 +93,4 @@ new_game()
 while play_again():
     new_game()
 
-print("Byeeeeee!")
+print("THANK YOU!")
